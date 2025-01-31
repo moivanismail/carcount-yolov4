@@ -16,8 +16,12 @@ Developed by [hantupenyiar](https://github.com/hantupenyiar).
 
 ```bash
 Python 3.6+
-OpenCV 4.1.1+
+OpenCV 4.1.1+ with CUDA support
 NumPy
+```
+if you need to build openCV4.1.1 with CUDA you can follow this awesome tutorial from JetsonHacksNano
+```html
+https://github.com/JetsonHacksNano/buildOpenCV
 ```
 
 ## 🚀 Quick Start
