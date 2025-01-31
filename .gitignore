@@ -7,3 +7,7 @@
 /yolov4-tiny.weights
 /yolov4.cfg
 /yolov4.weights
+yolov7-tiny.cfg
+yolov7-tiny.weights
+yolov7.cfg
+yolov7.weights
