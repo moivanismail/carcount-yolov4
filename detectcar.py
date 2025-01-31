@@ -4,6 +4,11 @@ from collections import OrderedDict
 
 # Inisialisasi model YOLO
 net = cv2.dnn.readNet("yolov4.weights", "yolov4.cfg")
+net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
+net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
+
+layer_names = net.getLayerNames()
+output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 layer_names = net.getLayerNames()
 output_layers = [layer_names[i - 1] for i in net.getUnconnectedOutLayers()]
 
@@ -145,6 +150,10 @@ def process_frame(frame):
     return frame
 
 def main():
+    #gst_pipeline = "v4l2src device=/dev/video0 ! video/x-raw, width=640, height=480, framerate=30/1 ! videoconvert ! video/x-raw, format=BGR ! appsink"
+    gst_pipeline = "filesrc location=cars.mp4 ! decodebin ! videoconvert ! appsink"
+
+    #cap = cv2.VideoCapture(gst_pipeline, cv2.CAP_GSTREAMER)
     cap = cv2.VideoCapture("cars.mp4")
     
     while True:
