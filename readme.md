@@ -16,13 +16,11 @@ Developed by [hantupenyiar](https://github.com/hantupenyiar).
 
 ```bash
 Python 3.6+
-OpenCV 4.1.1+ with CUDA support
+OpenCV >=4.11 with CUDA support
 NumPy
 ```
-if you need to build openCV4.1.1 with CUDA you can follow this awesome tutorial from JetsonHacksNano
-```html
-https://github.com/JetsonHacksNano/buildOpenCV
-```
+if you need to build openCV4.11 with CUDA you can follow this awesome tutorial from Qengineering
+https://qengineering.eu/install-opencv-on-jetson-nano.html
 
 ## 🚀 Quick Start
 
@@ -32,6 +30,8 @@ wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optim
 wget https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4.cfg
 wget https://raw.githubusercontent.com/pjreddie/darknet/master/data/coco.names
 ```
+additionally you can download media file cars.mp4 here:
+https://drive.google.com/file/d/1TVZpghKT9sTH6TEZsdp-OPGW4IgJY6nD
 
 ### Run Application
 ```bash
